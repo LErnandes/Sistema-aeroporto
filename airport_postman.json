@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "9ce21c39-6a28-4d14-a481-b68bbc0d4730",
+		"name": "Airport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar voo com assentos disponíveis",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/flights/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"flights",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar passagem aéreas por cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/tickets/customer/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"tickets",
+						"customer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar passagens por voo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "Listar passagens por voo",
+					"host": [
+						"Listar passagens por voo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obter detalhe da passagem aérea contendo os dados do voo também",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/tickets/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"tickets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar voo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"leftTime\": \"2020-01-01\",\n  \"arrivedTime\": \"2020-01-01\",\n  \"startAirport\": \"Congonhas\",\n  \"finalAirport\": \"Orlando\",\n  \"qty_seats\": 25,\n  \"price\": 200\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/flights/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"flights",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar cliente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\": \"Luis\",\n  \"lastName\": \"Ernandes\",\n  \"email\": \"luis@example.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/customers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar compra de passagem aérea",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"flight\": 2,\n  \"seat\": 2,\n  \"customer\": 2,\n  \"buyDate\": \"2020-01-01\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/tickets/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"tickets",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
